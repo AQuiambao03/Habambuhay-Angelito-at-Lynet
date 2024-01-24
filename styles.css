@@ -3,28 +3,38 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Dancing Script', cursive;
 }
 
 body {
   height: 100vh;
   width: 100vw;
-  background-color: gray;
+  background-image: url("images/bg.png");
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+h4{
+  color: #f5c79c !important;
+}
+
 .wrapper {
-  height: 347px;
+  height: 346px;
   width: 250px;
-  border: 5px solid #61412D;
+  border: 5px solid #8c5c3e;
   position: relative;
   perspective: 1000px;
 }
 
 
-.door {
-  background-color: #61412D;
+.window {
+  background-color: #8c5c3e;
   height: 100%;
   width: 50%;
   position: absolute;
@@ -46,19 +56,19 @@ body {
 	align-items: center;
 }
 
-#left-door {
+#left-window{
   top: 0;
   left: 0;
-  border-right: 1px solid black;
+  border: 1px solid #8c5c3e;
   /* transition */
   transform-origin: left;
   transition: transform 0.5s;
 }
 
-#right-door {
+#right-window{
   top: 0;
   right: 0;
-  border-left: 1px solid black;
+  border: 1px solid #8c5c3e;
   /* transition */
   transform-origin: right;
   transition: transform 0.5s;
@@ -66,10 +76,10 @@ body {
 
 
 /* Door swing effect */
-.wrapper:hover #left-door{
+.wrapper:hover #left-window{
   transform: rotateY(-140deg);
 }
 
-.wrapper:hover #right-door{
+.wrapper:hover #right-window{
   transform: rotateY(140deg);
 }
